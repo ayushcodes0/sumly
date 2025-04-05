@@ -3,9 +3,8 @@ import Image from "next/image";
 
 export default function Home() {
   return(
-    <>
-      Hey I am Page
-      <Button>Shadcn Button</Button>
-    </>
+    <div className="text-2xl">
+      
+    </div>
   );
 }
