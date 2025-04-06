@@ -20,7 +20,7 @@ const HeroSection = () => {
             </Badge>
           </div>
         </div>
-        <h1 className='mt-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl'>
+        <h1 className='mt-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-7xl'>
           Transform PDFs into{' '}
           <span className='relative inline-block'>
             <span className='relative z-10 px-2'>concise</span> 
