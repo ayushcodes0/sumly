@@ -61,7 +61,6 @@ const PricingCard = ({name , description, price , items, id, paymentLink}: Price
   </div>
 }
 
-
 const PricingSection = ()=> {
   return (
     <section>
