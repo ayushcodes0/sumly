@@ -62,7 +62,6 @@ const PricingCard = ({name , description, price , items, id, paymentLink}: Price
 }
 
 
-
 const PricingSection = ()=> {
   return (
     <section>
