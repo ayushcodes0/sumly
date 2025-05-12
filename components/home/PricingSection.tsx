@@ -1,15 +1,16 @@
 import Link from 'next/link'
 import React from 'react'
 
-const priceType = {
-  name: String,
-  price: Number,
-  description: String,
-  items: String[],
-  id: String,
-  paymentLink: String,
-  priceId: String
-}
+type PriceType = {
+  name: string;
+  price: number;
+  description: string;
+  items: string[];
+  id: string;
+  paymentLink: string;
+  priceId: string;
+};
+
 
 const plans = [
   {
@@ -40,10 +41,10 @@ const plans = [
   }
 ]
 
-const PricingCard = ({name , description, price , items, id, paymentLink}: priceType)=>{
+const PricingCard = ({name , description, price , items, id, paymentLink}: PriceType)=>{
   return <div className='relative w-full max-w-lg'>
     <div>
-      <p>{name}</p>
+      <p className='text-lg lg:text-xl font-bold capitalize'>{name}</p>
       <p>{description}</p>
     </div>
     <div>
