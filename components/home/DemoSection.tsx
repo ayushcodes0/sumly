@@ -24,7 +24,3 @@ export default DemoSection
 
 
 
-
-
-
-
