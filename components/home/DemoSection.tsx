@@ -18,6 +18,7 @@ const DemoSection = () => {
       </div>  
     </section>
   )
+  
 }
 
 export default DemoSection
