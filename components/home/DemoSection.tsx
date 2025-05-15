@@ -16,7 +16,6 @@ const DemoSection = () => {
             </div>
 
 
-
         </div>
       </div>  
     </section>
