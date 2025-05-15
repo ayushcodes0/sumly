@@ -14,7 +14,6 @@ const DemoSection = () => {
             <div className="flex justify-center items-center px-2 sm:px-4 lg:px-6">
                 {/* {Summary Viewer} */}
             </div>
-
         </div>
       </div>  
     </section>
