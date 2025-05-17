@@ -22,4 +22,3 @@ const DemoSection = () => {
 }
 
 export default DemoSection
-
