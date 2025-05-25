@@ -46,7 +46,7 @@ const plans = [
 ]
 
 const PricingCard = ({name , description, price , items, id, paymentLink}: PriceType)=>{
-  return <div className='relative w-full max-w-lg'>
+  return <div className='relative w-full max-w-lg hover:scale-105 hover:transition-all duration-300'>
     <div className={cn('relative flex-col h-full gap-4 lg:gap-8 z-10 p-8 rounded-2xl border-[1px] border-gray-500/20', id === 'pro' && "border-rose-500 gap-5 border-2")}>
       <div className='flex-col justify-between items-center gap-4'>
         <p className='text-lg lg:text-xl font-bold capitalize'>{name}</p>
