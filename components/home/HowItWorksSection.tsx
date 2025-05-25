@@ -62,6 +62,7 @@ function StepItem({icon, label, description}: Step){
             <div className="flex flex-col flex-1 gap-1 justify-between">
                 <h4 className='text-center font-bold text-xl'>{label}</h4>
                 <p className='text-gray-600 text-center text-sm'>{description}</p>
+                
             </div>
         </div>
     </div>
