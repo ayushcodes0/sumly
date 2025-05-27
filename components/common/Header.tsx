@@ -1,8 +1,7 @@
-import Link from 'next/link'
 import React from 'react'
 import { FileText } from 'lucide-react';
-import { Button } from '../ui/button';
 import NavLink from './NavLink';
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 
 
 const Header = () => {
@@ -18,18 +17,22 @@ const Header = () => {
 
       <div className='flex lg:justify-center gap-4 lg:gap-12 lg:items-center'>
         <NavLink href='/#pricing'>Pricing</NavLink>
-        {isLoggedIn && <NavLink href='/dashboard'>Your Summaries</NavLink>}
+        <SignedIn><NavLink href='/dashboard'>Your Summaries</NavLink></SignedIn>
       </div>
 
       <div className='flex lg:justify-end gap-2'>
-        {isLoggedIn?<div className='flex gap-2 items-center'>
+        <SignedIn>
+          <div className='flex gap-2 items-center'>
             <NavLink href='/upload'>Upload a PDF</NavLink>
             <div>Pro</div>
-            <Button>User</Button>
-        </div>
-        :<div>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+           </div>
+        </SignedIn>
+        <SignedOut>
             <NavLink href='/sign-in'>Sign In</NavLink>
-        </div>}
+        </SignedOut>
       </div>
     </nav>
   )
