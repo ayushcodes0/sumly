@@ -2,6 +2,15 @@
 
 import React from 'react'
 import UploadFormInput from './UploadFormInput'
+import {z} from "zod";
+
+
+// Making the schema for the file 
+const schema = z.object({
+  file: z.instanceof(File, {message: "Invalid file"}).
+  refine((file)=>file.size<=20 * 1024 * 1024, "File size must be less that 20MB").
+  refine((file)=>file.type.startsWith("application/pdf"),"File must be a PDF")
+})
 
 const UploadForm = () => {
 
@@ -10,6 +19,13 @@ const UploadForm = () => {
       console.log("submitted");
       const formData = new FormData(e.currentTarget);
       const file = formData.get("file") as File;
+
+      const validatedFields = schema.safeParse({file});
+
+      if(!validatedFields.success){
+        console.log(validatedFields.error.flatten().fieldErrors.file?.[0] ?? 'Invalid file');
+        return;
+      }
     }
 
   return (
